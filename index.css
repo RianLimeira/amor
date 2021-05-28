@@ -1,0 +1,9 @@
+body {
+    background-image: url(fundo.png);
+    background-size: 10%;
+    background-color: rgba(255, 0, 106, 0.3);
+}
+
+div {
+    display: inline-block;
+}
