@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Overview JQUERY</title>
+    <link href="estilo.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+        /*Overview JQUERY*/
+        /*
+            //Seletores CSS - JQUERY
+            $('#divTop') //Seleciona a div específica
+            $(".menu") //Seleciona a classe especificada
+            $('div.menu') //Seleciona todas as tags div com a classe especificada
+            $('#divTop span') //Seleciona span descendentes do elemento divTop
+            $('#divTop > div') //Seleciona todas as divs diretamente relacionadas
+    
+            $('.bloco span')//Seleciona todas span descendentes da classe bloco
+            $('li img') //Seleciona todas img dentro do li
+    
+            //Pseudos-seletores
+            $('.bloco div:first') //Seleciona apenas a primeira filha(div)
+            $('.bloco div:last') //Seleciona apenas a ultima filha(div)
+            $('table tr:odd')
+            $('table tr:even')
+    
+            //Funções JQUERY
+            $('table').css('font-weight') // Seleciona valor da propriedade no elemento selecionado
+            $('div').css({'color' : '#9b231c'}) //Atribui valor para propriedades específicas
+    
+            $('table tr:odd').css({ 'background-color': '#FFF' }) //tabela com efeito zebrado (linha cor sim/não)
+        */
+
+        //EVENTOS
+
+        $(document).ready(
+            function () {
+                //Comandos executados quando o documento está 'pronto'
+
+                //alert('Aula de JS');
+
+                $('li:first').click(
+                    function () {
+                        alert('O menu ' + $(this).find('span').html() + ' foi acionado!');
+                    }
+                );
+
+                $('tr').hover(
+                    function () {
+                        $(this).css({ 'color': 'red' });
+                    }
+                ).mouseleave(
+                    function () {
+                        $(this).css({ 'color': 'black' });
+                    }
+                );
+
+                var result = confirm('Bem-vindo ao meu site. Confirme para prosseguir');
+                if (!result) $(window.document.location).attr('href', 'http://www.unifafibe.com.br');
+
+                $('li:last').click(
+                    function () {
+                        // $('table').css({ 'font-weight': '400' });
+                        $('table').toggle('slow')
+                    }
+                );
+
+                //ao clicar na foto de perfil, deve-se ocultar o nome
+                $('#divImagem').click(function () {
+                    $('#divNome').hide()
+
+                });
+
+                //ao clicar no nome, deve-se ocultar/exibir foto de perfil 
+                $('#divNome').click(function () {
+                    $('#divImagem').toggle('slow')
+
+                });
+
+            }
+        );
+
+    </script>
+
+</head>
+
+<body>
+    <div class="bloco">
+
+        <div id="divTop">
+            <div id="divImagem">
+                <img src="perfil.jpg" />
+            </div>
+            <div id="divNome">
+                <span>João Silva</span>
+            </div>
+        </div>
+
+        <div class="menu">
+            <span>FAVORITOS</span>
+            <ul>
+                <li><img src="img1.png" /><span>Feed de notícias</span></li>
+                <li><img src="img2.png" /><span>Mensagens</span></li>
+                <li><img src="img3.png" /><span>Eventos</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="tabela">
+        <TABLE style=" font-weight: bold;">
+            <TH> Coluna 1</TH>
+            <TH> Coluna 2 </TH>
+            <TR>
+                <TD> linha1, coluna 1</td>
+                <td> linha 1, coluna 2 </TD>
+            </TR>
+            <TR>
+                <TD> linha 2, coluna 1</TD>
+                <TD>linha 2, coluna 2 </TD>
+            </TR>
+            <TR>
+                <TD> linha 3, coluna 1</TD>
+                <TD>linha 3, coluna 2 </TD>
+            </TR>
+            <TR>
+                <TD> linha 4, coluna 1</TD>
+                <TD>linha 4, coluna 2 </TD>
+            </TR>
+            <TR>
+                <TD> linha 5, coluna 1</TD>
+                <TD>linha 5, coluna 2 </TD>
+            </TR>
+        </TABLE>
+    </div>
+</body>
+
+</html>

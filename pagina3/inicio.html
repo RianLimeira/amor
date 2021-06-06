@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>inicio</title>
+
+    <script type="text/css">
+        <style>
+                .coluna {
+                float: left;
+                width: 33.33%;
+                .row::after {
+                    content: "";
+                    clear: both;
+                    display: table;
+                }
+                @media screen and (max-width: 500px) {
+                    .column {
+                        width: 100%;
+                    }
+                }
+        </style>
+    </script>
+
+    <script language="JavaSript">
+        function retornar() {
+            history.go(-1);
+
+        }
+    </script>
+</head>
+
+<body bgcolor="pink">
+
+    <a href="http://127.0.0.1:5500/pagina2.html">Teste Voltar</a>
+
+
+    <div class="row">
+        <div class="coluna">
+            <img src="album/foto.jpg" alt="descrição da imagem" style="width:50%">
+        </div>
+        <div class="coluna">
+            <img src="album/foto2.jpg" alt="descrição da imagem" style="width:50%">
+        </div>
+        <div class="coluna">
+            <img src="album/foto3.jpg" alt="descrição da imagem" style="width:50%">
+        </div>
+        <div class="coluna">
+            <img src="../coracao.jpg" alt="descrição da imagem" style="width:50%">
+        </div>
+    </div>
+
+</body>
+
+</html>

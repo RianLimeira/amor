@@ -7,3 +7,14 @@ body {
 div {
     display: inline-block;
 }
+
+h2 {
+    border: 2px;
+}
+
+.opcao {
+    font-style: oblique;
+    font-weight: bold;
+    border-color: red;
+    background-color: red;
+}
