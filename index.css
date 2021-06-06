@@ -34,3 +34,8 @@ h2 {
     background-color: red;
     width: 400px;
 }
+
+tr,
+td {
+    font-weight: bold;
+}
