@@ -5,24 +5,6 @@
     <meta charset="utf-8" />
     <title>inicio</title>
 
-    <script type="text/css">
-        <style>
-                .coluna {
-                float: left;
-                width: 33.33%;
-                .row::after {
-                    content: "";
-                    clear: both;
-                    display: table;
-                }
-                @media screen and (max-width: 500px) {
-                    .column {
-                        width: 100%;
-                    }
-                }
-        </style>
-    </script>
-
     <script language="JavaSript">
         function retornar() {
             history.go(-1);
@@ -46,10 +28,44 @@
         <div class="coluna">
             <img src="album/foto3.jpg" alt="descrição da imagem" style="width:50%">
         </div>
-        <div class="coluna">
-            <img src="../coracao.jpg" alt="descrição da imagem" style="width:50%">
+        <div class="coluna3">
+            <img src="album/foto7.jpg" alt="descrição da imagem" style="width: 30%">
         </div>
+
+        <div class="coluna">
+            <img src="album/foto4.jpg" alt="descrição da imagem" style="width:50%">
+        </div>
+        <div class="coluna">
+            <img src="album/foto5.jpg" alt="descrição da imagem" style="width:80%">
+        </div>
+
     </div>
+
+    <style>
+        .coluna {
+            float: left;
+            width: 33.33%;
+        }
+        
+        .coluna3 {
+            float: center;
+            width: 100%;
+        }
+        
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        @media screen and (max-width: 500px) {
+            .column {
+                width: 100%;
+            }
+        }
+    </style>
+
+
 
 </body>
 
