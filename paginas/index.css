@@ -1,0 +1,41 @@
+body {
+    background-image: url(fundo.png);
+    background-size: 50%;
+    background-color: rgba(255, 0, 106, 0.3);
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+
+h2,
+h3 {
+    background-color: none;
+    font-style: oblique;
+}
+
+pre {
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: oblique;
+    color: black;
+}
+
+div {
+    display: inline-block;
+}
+
+h2 {
+    border: 2px;
+}
+
+.opcao {
+    font-style: oblique;
+    font-weight: bold;
+    border-color: red;
+    background-color: red;
+    width: 400px;
+}
+
+tr,
+td {
+    font-weight: bold;
+}

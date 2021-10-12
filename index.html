@@ -1,74 +1,55 @@
 <!DOCTYPE html>
 
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css" type="text/css">
-
-    <script type="text/javascript">
-        function refreshPage() {
-            window.location.reload();
-        }
+    <title>Login</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="index.js">
     </script>
-
 </head>
 
 <body>
+    <div class="row">
+        <div class="container login col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4">
+            <br />
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h1 class="title-login">Login</h1>
+                </div>
+                <div class="panel-body">
+                    <form method="post">
 
-    <audio src="musicas/naruto.mp3" controls loop>
-        hidden:false;
-        O seu navegador não suporta o elemento <code>audio</code>
-      </audio>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"> <i class="glyphicon glyphicon-user"
+                                        style="width: auto"></i>
 
+                                </span> <input id="txtUsuario" runat="server" type="text" class="form-control" name="username" placeholder="Usuário" required="" />
 
-    <div id="teste">
+                            </div>
 
-    </div>
-    <img src="coracao.jpg" height="10%" width="10%">
-    <button type="submit" onClick="refreshPage()">Recarregar</button>
-    <h1>Ola</h1>
+                            <div class="input-group">
+                                <span class="input-group-addon"> <i class="glyphicon glyphicon-lock"
+                                        style="width: auto"></i>
+                                </span> <input id="txtSenha" runat="server" type="password" class="form-control" name="password" placeholder="Senha" required="" />
+                            </div>
 
-    <div>
-        <h2>
-            Você está preste a entrar em um site, feito com muita dedicação e carinho!
-        </h2>
-        <h3>Por favor, escolha uma opção abaixo e clique no botão desejado:</h3>
-        <form>
-            <p class="opcao">
-                <label>OPC:</label> <br />
-                <input type="radio" name="valor" value="vl1" />Texto <br />
-                <input type="radio" name="valor" value="vl2" />Album (inacabado) <br />
-                <input type="radio" name="valor" value="vl3" />Datas <br />
-                <input type="radio" name="valor" value="vl4" />Lista para assistir <br />
-                <input type="radio" name="valor" value="vl5" />Musicas<br />
-            </p>
+                            <!--div class="alert lert-danger">
+                                      <strong>Atenção!</strong> Usuário e/ou senha incorretos.
+                                  </div-->
 
-        </form>
-        <!-- <a href="pagina2.html"><button>Meu Botão</button></a> -->
-        <div id="botao">
-            <div>
-                <a class="button" href="pagina2.html" style=" border:1px solid; padding: 11px 21px; vertical-align: middle; background:#2D888F;
-                 color:white;border-radius:6px; font-size: 10px; font-family:helvetica, serif;text-decoration:none;">opcao1</a>
-            </div>
-            <div>
-                <a class="button" target="_blank" href="pagina3/pagina3.html" style=" border:1px solid; padding: 11px 21px; vertical-align: middle; background:#2D888F;
-                 color:white;border-radius:6px; font-size: 10px; font-family:helvetica, serif;text-decoration:none;">opcao2</a>
-            </div>
-            <div>
-                <a class="button" href="/datas/pagina4.html" style=" border:1px solid; padding: 11px 21px; vertical-align: middle; background:#2D888F;
-                color:white;border-radius:6px; font-size: 10px; font-family:helvetica, serif;text-decoration:none;">opcao3</a>
-            </div>
-            <div>
-                <a class="button" href="pagina5.html" style=" border:1px solid; padding: 11px 21px; vertical-align: middle; background:#2D888F;
-                 color:white;border-radius:6px; font-size: 10px; font-family:helvetica, serif;text-decoration:none;">opcao4</a>
-            </div>
-            <div>
-                <a class="button" href="pagina6.html" style=" border:1px solid; padding: 11px 21px; vertical-align: middle; background:#2D888F;
-                 color:white;border-radius:6px; font-size: 10px; font-family:helvetica, serif;text-decoration:none;">opcao5</a>
+                            <input class="btn btn-xm btn-block btn-entrar" type="submit" value="Entrar" onclick="Login(event)" />
+                        </div>
+                </div>
+                </form>
             </div>
         </div>
     </div>
-
+    </div>
+    <script>
+    </script>
 </body>
 
 </html>
